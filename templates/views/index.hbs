@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{{title}}</title>
+    <link rel="stylesheet" href="/css/styles.css">
+
+    <style>
+    #map {
+        margin-top: 100px;
+        height: 400px; /* or any other height */
+        width: 100%; /* or any specific width */
+    }
+</style>
+
+</head>
+<body>
+
+    <div class="main-content">
+        {{>header}}
+        <article class="widget">
+            <form action="" class="weatherLocation">
+                <input type="text" class="input-field" placeholder="enter your city" />
+                <button class="search-button">Search</button>
+            </form>
+
+            <div class="icon-and-weatherInfo">
+                <div class="weatherIcon">
+                    <i></i>
+                </div>
+
+                <div class="weatherInfo">
+                    <div class="temperature">
+                        <span></span>
+                    </div>
+                    <div class="weatherCondition">
+
+                    </div>
+                </div>
+            </div>
+
+            <div class="place"></div>
+            <div class="date"></div>
+
+            <div class="other-detail">
+                <div class="other-detail-info">Other Information:</div>
+                <div class="coordinates"></div>
+                <div class="feels-temperature"></div>
+                <div class="humidity"></div>
+                <div class="pressure"></div>
+                <div class="wind-speed"></div>
+                <div class="country-code"></div>
+                <div class="rain-volume"></div>
+                <div class="3-hours"></div>
+            </div>
+
+            <div id="map"></div>
+
+            <div class="air-quality">
+                <h3>Air Quality Index (AQI)</h3>
+                <p class="aqi-value"></p>
+            </div>
+
+            <h1 class="article-title">News that related with city:</h1>
+            <div id="news-container" class="news-con">
+                
+            </div>
+        </article>
+    </div>
+
+<script async src="https://maps.googleapis.com/maps/api/js?key=AIzaSyD7qT-cVUQs4sz210t-V9OT4hNU_GyaqpI&callback=initMap">
+</script>
+<script type="text/javascript" src="js/app.js"></script>
+</body>
+</html>
